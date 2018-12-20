@@ -1,10 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
-import Header from './header'
-import LandingImage from './landingImage';
-import { relative } from 'path';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
+import Nav from './header/nav';
+import LandingImage from './header/landingImage';
+// import { relative } from 'path';
 import styles from './layout.module.css';
+import About from './about';
 
 const Layout = () => (
   <StaticQuery
@@ -20,7 +21,8 @@ const Layout = () => (
     render={data => (
       <div >
         <LandingImage id={styles.landingWithHeader}/>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Nav siteTitle={data.site.siteMetadata.title} />
+        <About />
         <div
           style={{
             margin: '0 auto',

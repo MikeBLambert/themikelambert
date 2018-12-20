@@ -9,9 +9,9 @@ img {
   position: absolute;
 }
 
-h1 {
+#landingTitle {
   position: absolute;
   font-size: 50px;
   margin-top: 40vh;
-  margin-left: 65vw;
+  margin-left: 15vw;
 }

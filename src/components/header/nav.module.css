@@ -1,0 +1,23 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navLink {
+  color: white;
+  font-size: 25px;
+}
+
+#navBar {
+  height: 12vh;
+  background-color: purple;
+}
+
+.fixedNav {
+  position: fixed;
+  top: 0;
+  height: 12vh;
+  background-color: purple;
+  width: 100%;
+}
