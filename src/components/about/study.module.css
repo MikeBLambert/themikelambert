@@ -1,0 +1,48 @@
+#studyTitle {
+  font-size: 55px;
+  text-align: center;
+  padding-top: 50px;
+  // padding-bottom: 25px;
+}
+
+#allStudyLogos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.studyLogoDiv {
+  width: 250px;
+  height: 350px;
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  box-shadow: 2.5px 2.5px 5px;
+}
+
+.studyLabel {
+  font-size: 30px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+#uwLogo {
+  width: 200px;
+  text-align: center;
+}
+#nanjingNormalLogo {
+  width: 150px;
+  align-self: center;
+}
+#ieLogo {
+  width: 150px;
+  align-self: center;
+}
+#alchemyLogo {
+  width: 175px;
+  margin-top: 25px;
+  // height: 125px;
+}

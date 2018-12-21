@@ -2,6 +2,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  z-index: 99999;
 }
 
 .navLink {

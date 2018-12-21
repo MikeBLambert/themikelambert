@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import Nav from './header/nav';
 import LandingImage from './header/landingImage';
-// import { relative } from 'path';
 import styles from './layout.module.css';
-import About from './about';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import About from './about/about';
+
+AOS.init();
 
 const Layout = () => (
   <StaticQuery

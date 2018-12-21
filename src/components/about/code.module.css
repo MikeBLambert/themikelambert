@@ -1,0 +1,83 @@
+
+#codeTitle {
+  font-size: 55px;
+  text-align: center;
+  padding-top: 50px;
+  // padding-bottom: 25px;
+}
+
+#allLogosDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.logoDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 9px;
+  width: 175px;
+  height: 225px;
+  background-color: white;
+  // border: 0.75px solid purple;
+  box-shadow: 2.5px 2.5px 5px;
+}
+
+.logoLabel {
+  position: relative;
+  margin-top: 15px;
+  font-size: 30px;
+}
+
+.logo {
+  width: 95px;
+  margin-top: 25px;
+}
+
+#vueLogo {
+  width: 125px;
+  margin-bottom: 0px;
+}
+
+#reactLogoDiv {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#reactLogo {
+  padding-top: 35px;
+  width: 125px;
+  margin: 0;
+}
+
+#reduxLogo {
+  padding-bottom: -20px;
+}
+
+#nodeLogoDiv {
+  padding-top: 45px;
+}
+
+#jsLogoDiv {
+  padding-left: 39.71px;
+  padding-right: 39.71px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#postgresLogoDiv {
+  padding-left: 34.025px;
+  padding-right: 34.025px;
+}
+
+#jestLogoDiv {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#jestLogo {
+  padding-top: 20px;
+  width: 125px;
+}
