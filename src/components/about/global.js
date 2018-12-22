@@ -8,6 +8,9 @@ export default function global() {
       <h1 data-aos="fade-in" id={styles.globalTitle}>
         {'{ Global Citizen }'}
       </h1>
+      <h4 className={styles.globalStats} data-aos="fade-in">
+        countriesLivedIn = [ Brazil, China, Mexico, Peru, United States ]
+      </h4>
       <div id={styles.map} data-aos="fade-in">
         <img src={worldMap} id={styles.mapImg} />
         <div id={styles.dots}>
@@ -18,14 +21,18 @@ export default function global() {
           <div className={`${styles.dot} ${styles.dot5}`} />
         </div>
       </div>
-      <div id={styles.video} data-aos="flip-right">
+      <h4 className={styles.globalStats} data-aos="fade-in">
+        languagesSpoken = [ English, Mandarin-Chinese, Spanish, Portuguese ]
+      </h4>
+
+      <div id={styles.video} data-aos="fade-in">
         <iframe
           width="55%"
-          height="500vh"
+          // height="500vh"
           src="https://www.youtube.com/embed/xDnxZbRdYy8"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
           data-aos="fade-in"
           title="Expressing myself in multiple languages"
         />

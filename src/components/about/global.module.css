@@ -1,8 +1,12 @@
 #globalTitle {
   font-size: 55px;
   text-align: center;
-  padding-top: 50px;
-  // padding-bottom: 25px;
+  padding-top: 75px;
+}
+
+.globalStats {
+  font-size: 35px;
+  text-align: center;
 }
 
 @keyframes pulse {
