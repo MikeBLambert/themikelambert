@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './study.module.css';
+import styles from './Study.module.css';
 import uwLogo from '../../images/logos/university-of-washington.png';
 import nanjingNormalLogo from '../../images/logos/nanjing-normal.png';
 import ieLogo from '../../images/logos/ie.png';
 import alchemyLogo from '../../images/logos/alchemy.webp';
 
-export default function study() {
+export default function Study() {
   return (
     <div>
       <h1 data-aos="fade-in" id={styles.studyTitle}>{'{ Student }'}</h1>
