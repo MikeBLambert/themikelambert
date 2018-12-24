@@ -1,0 +1,43 @@
+.overlay {
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+
+#projectsTitle {
+  font-size: 75px;
+  text-align: center;
+  padding-top: 75px;
+  text-shadow: 2.5px 2.5px 5px purple;
+}
+
+#buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectButton {
+  border: none;
+  background-color: white;
+  box-shadow: 2.5px 2.5px 5px;
+  font-size: 25px;
+  padding: 10px;
+  margin: 15px;
+  width: 50vw;
+}
+
+.projectButton:hover {
+  cursor: pointer;
+  background-color: purple;
+  color: white;
+  box-shadow: 2.5px 2.5px 5px;
+}
+
+.normal {
+  padding-bottom: 75px;
+}
