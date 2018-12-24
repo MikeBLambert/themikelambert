@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
-import Nav from './header/nav';
-import LandingImage from './header/landingImage';
+import Nav from './header/Nav';
+import LandingImage from './header/LandingImage';
 import styles from './layout.module.css';
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-import About from './about/about';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import About from './about/About';
+import Projects from './projects/Projects';
+import Blog from './blog/Blog';
+import Contact from './contact/Contact';
 
 AOS.init();
 
@@ -22,10 +25,13 @@ const Layout = () => (
       }
     `}
     render={data => (
-      <div >
-        <LandingImage id={styles.landingWithHeader}/>
+      <div>
+        <LandingImage id={styles.landingWithHeader} />
         <Nav siteTitle={data.site.siteMetadata.title} />
         <About />
+        <Projects />
+        <Blog />
+        <Contact />
         <div
           style={{
             margin: '0 auto',
@@ -33,15 +39,14 @@ const Layout = () => (
             padding: '0px 1.0875rem 1.45rem',
             paddingTop: 0,
           }}
-        >
-        </div>
+        />
       </div>
     )}
   />
-)
+);
 
 Layout.propTypes = {
-  children: PropTypes.node
-}
+  children: PropTypes.node,
+};
 
-export default Layout
+export default Layout;
