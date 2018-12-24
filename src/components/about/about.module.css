@@ -1,3 +1,10 @@
-#container {
+.aboutContainer {
   background-color: #f3eaff;
+}
+
+#aboutTitle {
+  font-size: 75px;
+  text-align: center;
+  padding-top: 75px;
+  text-shadow: 2.5px 2.5px 5px purple;
 }
