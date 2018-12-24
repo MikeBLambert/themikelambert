@@ -11,14 +11,14 @@ nav {
 }
 
 #navBar {
-  height: 12vh;
+  height: 8vh;
   background-color: purple;
 }
 
 .fixedNav {
   position: fixed;
   top: 0;
-  height: 12vh;
+  height: 8vh;
   background-color: purple;
   width: 100%;
 }
