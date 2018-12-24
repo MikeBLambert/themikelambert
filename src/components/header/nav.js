@@ -1,18 +1,28 @@
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import styles from './nav.module.css';
-import LandingImage from './landingImage';
+import styles from './Nav.module.css';
+import LandingImage from './LandingImage';
 
 export default class Nav extends React.Component {
-  constructor(props) {
-        super(props);
+  // constructor(props) {
+  //   super(props);
 
-        this.state = {
-          fixedNav: false
-        };
-        this.handleScroll = this.handleScroll.bind(this);
-    }
+  //   this.state = {
+  //     fixedNav: false
+  //   };
+  //   this.handleScroll = this.handleScroll.bind(this);
+  //   }
+
+
+
+    state = {
+      fixedNav: false
+    };
+
+    handleScroll = this.handleScroll.bind(this);
+
+
 
     handleScroll() {
         this.setState({scroll: window.scrollY});
@@ -25,16 +35,16 @@ export default class Nav extends React.Component {
     }
 
   componentDidUpdate() {
-        this.state.scroll > this.state.top ?
-            document.body.style.paddingTop = `${this.state.height}px` :
-            document.body.style.paddingTop = 0;
-    }
+    this.state.scroll > this.state.top ?
+    document.body.style.paddingTop = `${this.state.height}px` :
+    document.body.style.paddingTop = 0;
+  }
 
   render() {
 
     const links = ['About', 'Projects', 'Blog', 'Contact'];
     const listLinks = links.map((link, i) => {
-      return <a key={i} className={styles.navLink}>{link}</a>;
+      return <Link key={i} to={`#${link}`} className={styles.navLink}>{link}</Link>;
     })
     return (
       <div >
