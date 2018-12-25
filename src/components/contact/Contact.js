@@ -7,7 +7,7 @@ import twitterLogo from '../../images/logos/twitter.png';
 
 export default function Contact() {
   return (
-    <div id="Contact">
+    <div id="Contact" className={styles.contactContainer}>
       <h1 id={styles.contactTitle} data-aos="fade-in">
         {'< Contact />'}
       </h1>
@@ -18,6 +18,7 @@ export default function Contact() {
               id={styles.gmailLogo}
               className={styles.contactLogo}
               src={gmailLogo}
+              alt="Gmail Logo"
             />
           </a>
         </div>
@@ -28,6 +29,7 @@ export default function Contact() {
               id={styles.gitHubLogo}
               className={styles.contactLogo}
               src={gitHubLogo}
+              alt="GitHub Logo"
             />
           </a>
         </div>
@@ -38,6 +40,7 @@ export default function Contact() {
               id={styles.linkedInLogo}
               className={styles.contactLogo}
               src={linkedInLogo}
+              alt="LinkedIn Logo"
             />
           </a>
         </div>
@@ -48,6 +51,7 @@ export default function Contact() {
               id={styles.twitterLogo}
               className={styles.contactLogo}
               src={twitterLogo}
+              alt="twitter logo"
             />
           </a>
         </div>

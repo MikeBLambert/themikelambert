@@ -10,3 +10,6 @@ export const POST_2_TITLE =
 export const POST_2_URL =
   'https://www.linkedin.com/pulse/3-reasons-why-online-mbas-better-than-traditional-mike-lambert-/';
 export const POST_2_ALT = 'Class photo';
+
+
+
