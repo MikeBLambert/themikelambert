@@ -1,14 +1,14 @@
 
 import React from 'react'
 import Layout from '../components/layout'
-import About from '../components/about/About';
+import Projects from '../components/projects/Projects';
 // import SEO from '../components/seo'
 
-const IndexPage = () => (
+const ProjectsPage = () => (
   <>
   <Layout />
-  <About />
+  <Projects />
   </>
 )
 
-export default IndexPage
+export default ProjectsPage
