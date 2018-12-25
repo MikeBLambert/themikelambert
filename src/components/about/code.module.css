@@ -1,13 +1,12 @@
 #codeTitle {
   font-size: 40px;
   text-align: center;
-  /* padding-top: 75px; */
 }
 
 #allLogosDiv {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .logoDiv {
@@ -16,8 +15,8 @@
   justify-content: space-between;
   align-items: center;
   margin: 9px;
-  width: 100px;
-  height: 135px;
+  width: 150px;
+  height: 175px;
   background-color: white;
   box-shadow: 2.5px 2.5px 5px;
 }
