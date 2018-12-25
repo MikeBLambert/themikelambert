@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
-import Nav from './header/Nav';
-import LandingImage from './header/LandingImage';
+import Header from './header/Header';
 import styles from './layout.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -24,8 +23,7 @@ const Layout = () => (
     `}
     render={data => (
       <>
-        <LandingImage id={styles.landingWithHeader} />
-        <Nav siteTitle={data.site.siteMetadata.title} />
+        <Header id={styles.landingWithHeader} siteTitle={data.site.siteMetadata.title} />
       </>
     )}
   />
