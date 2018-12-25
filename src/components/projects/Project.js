@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './Modal.module.css';
+import styles from './Project.module.css';
 import { PropTypes } from 'prop-types';
 
-export default function Project({ show, hideModal, technologies, title, description, alt, screenshot, url }) {
+const Project = ({ show, hideModal, technologies, title, description, alt, screenshot, url }) => {
   const showOrHide = show ? styles.displayModal : styles.hideModal;
 
   const technologiesList = technologies.map((technology, i) => {
@@ -48,12 +48,13 @@ export default function Project({ show, hideModal, technologies, title, descript
   );
 }
 
-// Project.propTypes = {
-//   show: PropTypes.string.isRequired,
-//   hideModal: PropTypes.func.isRequired,
-//   technologies: PropTypes.array.isRequired,
-//   title: PropTypes.string,isRequired,
-//   description: PropTypes.string.isRequired,
-//   alt: PropTypes.string.isRequired,
-//   url: PropTypes.string.isRequired
-// }
+Project.propTypes = {
+  show: PropTypes.string.isRequired,
+  hideModal: PropTypes.func.isRequired,
+  technologies: PropTypes.array.isRequired,
+  description: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired
+}
+
+export default Project;
