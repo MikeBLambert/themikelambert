@@ -12,7 +12,7 @@ export default function Travel() {
         countriesLivedIn = [ Brazil, China, Mexico, Peru, United States ]
       </h4>
       <div id={styles.mapContainer} data-aos="fade-in">
-        <img src={worldMap} id={styles.mapImg} />
+        <img src={worldMap} id={styles.mapImg} alt="World Map"/>
         <div id={styles.dots}>
           <div className={`${styles.dot} ${styles.dot1}`} />
           <div className={`${styles.dot} ${styles.dot2}`} />
@@ -28,7 +28,7 @@ export default function Travel() {
       <div id={styles.video} data-aos="fade-in">
         <iframe
           width="55%"
-          height="300vh"
+          height="500vh"
           src="https://www.youtube.com/embed/xDnxZbRdYy8"
           frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
