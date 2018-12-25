@@ -8,7 +8,7 @@ import alchemyLogo from '../../images/logos/alchemy.webp';
 export default function Study() {
   return (
     <div>
-      <h1 data-aos="fade-in" id={styles.studyTitle}>{'{ Student }'}</h1>
+      <h1 data-aos="fade-in" id={styles.studyTitle}>{'{ Graduate }'}</h1>
       <div id={styles.allStudyLogos}>
         <div className={styles.studyLogoDiv} data-aos="flip-left">
           <img src={uwLogo} id={styles.uwLogo} alt="University of Washington Logo" />
