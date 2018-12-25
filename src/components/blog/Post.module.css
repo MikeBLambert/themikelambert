@@ -1,6 +1,6 @@
 #postContainer {
   display: flex;
-  background-color: white;
+  background-color: lightgray;
   margin: 3vh 10vw 3vh 10vw;
   align-items: center;
   justify-content: space-around;
@@ -22,12 +22,16 @@
 #postTitleAndImage {
   text-align: center;
   width: 70%;
+  padding: 5px;
+  border: 2px solid black;
+  background-color: white;
 }
 
 #postTitle {
-  font-size: 35px;
+  font-size: 30px;
+  margin: 0;
 }
 
 #postImage {
-  width: 80%;
+  width: 60%;
 }
