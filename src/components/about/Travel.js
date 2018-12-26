@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Travel.module.css'
+import styles from './travel.module.css'
 import worldMap from '../../images/world-map.png'
 
 export default function Travel() {
