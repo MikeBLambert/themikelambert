@@ -1,30 +1,20 @@
 import React, { PureComponent, Fragment } from 'react';
 import styles from './Projects.module.css';
 import Project from './Project';
-// import {
-//   PROJECT_1_TITLE,
-//   PROJECT_1_TECHNOLOGIES,
-//   PROJECT_1_DESCRIPTION,
-//   PROJECT_1_IMG_ALT,
-//   PROJECT_1_URL,
-//   PROJECT_2_TITLE,
-//   PROJECT_2_TECHNOLOGIES,
-//   PROJECT_2_DESCRIPTION,
-//   PROJECT_2_IMG_ALT,
-//   PROJECT_2_URL,
-//   PROJECT_3_TITLE,
-//   PROJECT_3_TECHNOLOGIES,
-//   PROJECT_3_DESCRIPTION,
-//   PROJECT_3_IMG_ALT,
-//   PROJECT_3_URL,
-// } from './projectContent';
-
-import { projects } from './projectContent';
+import { projects } from './fixtures/projectContent';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default class Projects extends PureComponent {
   state = {
     show: 'none',
   };
+
+  componentDidMount() {
+    AOS.init({
+      delay: 300,
+    });
+  }
 
   showModal = ({ target }) => {
     this.setState({ show: target.value });
@@ -61,7 +51,7 @@ export default class Projects extends PureComponent {
     const projectButtonList = projects.map((project, i) => {
       return (
         <button
-          data-aos="flip-down"
+          data-aos="fade-down"
           className={styles.projectButton}
           value={project.keyword}
           onClick={this.showModal}

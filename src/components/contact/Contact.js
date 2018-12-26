@@ -1,18 +1,27 @@
-import React from 'react';
+import React, { PureComponent } from 'react'
 import styles from './Contact.module.css';
 import gmailLogo from '../../images/logos/gmail.png';
 import linkedInLogo from '../../images/logos/linkedIn.png';
 import gitHubLogo from '../../images/logos/gitHub.png';
 import twitterLogo from '../../images/logos/twitter.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-export default function Contact() {
-  return (
-    <div id="Contact" className={styles.contactContainer}>
+export default class Contact extends PureComponent {
+
+  componentDidMount() {
+    AOS.init({
+      delay: 300,
+    });
+  }
+  render() {
+    return (
+      <div id="Contact" className={styles.contactContainer}>
       <h1 id={styles.contactTitle} data-aos="fade-in">
         {'< Contact />'}
       </h1>
       <div id={styles.contactLogosDiv} >
-        <div className={styles.logoDiv} data-aos="flip-right">
+        <div className={styles.logoDiv} data-aos="fade-right">
           <a href="mailto:mlamb128@gmail.com">
             <img
               id={styles.gmailLogo}
@@ -23,7 +32,7 @@ export default function Contact() {
           </a>
         </div>
 
-        <div className={styles.logoDiv} data-aos="flip-right">
+        <div className={styles.logoDiv} data-aos="fade-right">
           <a href="https://github.com/MikeBLambert">
             <img
               id={styles.gitHubLogo}
@@ -34,7 +43,7 @@ export default function Contact() {
           </a>
         </div>
 
-        <div className={styles.logoDiv} data-aos="flip-right">
+        <div className={styles.logoDiv} data-aos="fade-right">
           <a href="https://www.linkedin.com/in/mike-b-lambert/">
             <img
               id={styles.linkedInLogo}
@@ -45,7 +54,7 @@ export default function Contact() {
           </a>
         </div>
 
-        <div className={styles.logoDiv} data-aos="flip-right">
+        <div className={styles.logoDiv} data-aos="fade-right">
           <a href="https://twitter.com/mikeblambert">
             <img
               id={styles.twitterLogo}
@@ -57,5 +66,6 @@ export default function Contact() {
         </div>
       </div>
     </div>
-  );
+    )
+  }
 }

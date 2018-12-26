@@ -126,6 +126,7 @@
     margin-left: 7px;
     transition: 0.5s;
     position: fixed;
+    z-index: 999;
   }
   .hamburgerSpan::before,
   .hamburgerSpan::after {
@@ -137,6 +138,7 @@
     content: '';
     display: block;
     position: relative;
+    z-index: 999;
   }
   .hamburgerSpan:before {
     top: -10px;

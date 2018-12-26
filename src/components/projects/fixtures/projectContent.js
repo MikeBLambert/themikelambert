@@ -1,7 +1,7 @@
-import jeopardyScreenshot from '../../images/portfolio/jeopardy.png';
-import cryptoScreenshot from '../../images/portfolio/crypto.png';
-import nannyScreenshot from '../../images/portfolio/nanny.png';
-import memeScreenshot from '../../images/portfolio/meme.png';
+import jeopardyScreenshot from '../../../images/portfolio/jeopardy.png';
+import cryptoScreenshot from '../../../images/portfolio/crypto.png';
+import nannyScreenshot from '../../../images/portfolio/nanny.png';
+import memeScreenshot from '../../../images/portfolio/meme.png';
 
 export const projects = [
   {
