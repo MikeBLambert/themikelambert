@@ -3,7 +3,7 @@ import styles from './Study.module.css';
 import uwLogo from '../../images/logos/university-of-washington.png';
 import nanjingNormalLogo from '../../images/logos/nanjing-normal.png';
 import ieLogo from '../../images/logos/ie.png';
-import alchemyLogo from '../../images/logos/alchemy.webp';
+import alchemyLogo from '../../images/logos/alchemy.png';
 
 export default function Study() {
   return (
