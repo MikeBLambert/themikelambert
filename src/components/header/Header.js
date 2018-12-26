@@ -3,6 +3,7 @@ import React, { PureComponent } from 'react';
 import styles from './Header.module.css';
 import backgroundImage from '../../images/landing-image.jpg';
 
+
 export default class Nav extends PureComponent {
   state = {};
 
@@ -13,6 +14,7 @@ export default class Nav extends PureComponent {
   }
 
   componentDidMount() {
+
     const nav = document.querySelector('nav');
     this.setState({ top: nav.offsetTop, height: nav.offsetHeight });
     window.addEventListener('scroll', this.handleScroll);
