@@ -1,0 +1,25 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "personalsite-20181225141723-authRole",
+            "UnauthRoleArn": "arn:aws:iam::389781400933:role/personalsite-20181225141723-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::389781400933:role/personalsite-20181225141723-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "personalsite-20181225141723-deployment",
+            "UnauthRoleName": "personalsite-20181225141723-unauthRole",
+            "StackName": "personalsite-20181225141723",
+            "StackId": "arn:aws:cloudformation:us-west-2:389781400933:stack/personalsite-20181225141723/da6ced90-0892-11e9-99f3-0206b4669a7e"
+        }
+    },
+    "hosting": {
+        "S3AndCloudFront": {
+            "service": "S3AndCloudFront",
+            "providerPlugin": "awscloudformation",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/personalsite-20181225141723-deployment/amplify-cfn-templates/hosting/template.json",
+                "logicalId": "hostingS3AndCloudFront"
+            },
+            "lastPushTimeStamp": "2018-12-26T00:31:20.898Z"
+        }
+    }
+}
