@@ -2,6 +2,8 @@ import jeopardyScreenshot from '../../../images/portfolio/jeopardy.png';
 import cryptoScreenshot from '../../../images/portfolio/crypto.png';
 import nannyScreenshot from '../../../images/portfolio/nanny.png';
 import memeScreenshot from '../../../images/portfolio/meme.png';
+import musicMeowScreenshot from '../../../images/portfolio/music-meow.png';
+import pokedexScreenshot from '../../../images/portfolio/pokedex.png';
 
 export const projects = [
   {
@@ -54,5 +56,25 @@ export const projects = [
     screenshot: memeScreenshot,
     alt: 'Meme screenshot',
     keyword: 'meme',
+  },
+  {
+    technologies: ['React', 'Jest'],
+    title: 'Music Meow',
+    description:
+      "This application allows users to search for any artist in the MusicBrainz database and then see the full lyrics of any of that artist's songs. The lyrics are accessed via the Lyrics.ovh API.",
+    url: 'https://github.com/MikeBLambert/artist-search',
+    screenshot: musicMeowScreenshot,
+    alt: 'Music Meow screenshot',
+    keyword: 'musicMeow',
+  },
+  {
+    technologies: ['Vue'],
+    title: 'Pokedex',
+    description:
+      'Using a dataset of over 800 Pokemon, this application applies sorting and filtering to dynamically show/hide Pokemon based upon user input.',
+    url: 'https://github.com/MikeBLambert/pokedex',
+    screenshot: pokedexScreenshot,
+    alt: 'Pokedex screenshot',
+    keyword: 'pokedex',
   },
 ];
