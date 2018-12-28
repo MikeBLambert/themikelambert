@@ -3,8 +3,8 @@
   height: 100vh;
 }
 
-#landingImage {
-  height: 100%;
+.landingImage {
+  height: 100vh;
   width: 100%;
   object-fit: cover;
   position: absolute;
