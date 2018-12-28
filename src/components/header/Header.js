@@ -18,7 +18,7 @@ export default class Nav extends PureComponent {
   }
 
   componentDidUpdate() {
-    this.state.scrolledTo > this.state.top
+    this.state.scrolledTo > this.state.top && window.innerWidth > 699
       ? (document.body.style.paddingTop = `${this.state.height}px`)
       : (document.body.style.paddingTop = 0);
   }
@@ -43,6 +43,7 @@ export default class Nav extends PureComponent {
           <div id={styles.landingImage}>
           </div>
           <img src={backgroundImage} alt="mountains" id={styles.landingImage} />
+          {/* <LandingImage /> */}
           <div id={styles.hamburgerContainer}>
             <label id={styles.hamburgerLabel}>
               Checkbox for hamburger button
