@@ -4,8 +4,6 @@ import { StaticQuery, graphql } from 'gatsby';
 import Header from './header/Header';
 import styles from './layout.module.css';
 
-
-
 const Layout = () => (
   <StaticQuery
     query={graphql`
@@ -19,7 +17,10 @@ const Layout = () => (
     `}
     render={data => (
       <>
-        <Header id={styles.landingWithHeader} siteTitle={data.site.siteMetadata.title} />
+        <Header
+          id={styles.landingWithHeader}
+          siteTitle={data.site.siteMetadata.title}
+        />
       </>
     )}
   />
