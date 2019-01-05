@@ -1,18 +1,16 @@
-import React from 'react'
-import styles from './travel.module.css'
-import worldMap from '../../images/world-map.png'
+import React from 'react';
+import styles from './travel.module.css';
+import worldMap from '../../images/world-map.png';
 
 export default function Travel() {
   return (
     <div>
       <h1 data-aos="fade-in" id={styles.travelTitle}>
-        {'{ Global Citizen }'}
+        {'{ Globe Trotter }'}
       </h1>
-      <h4 className={styles.travelStats} data-aos="fade-in">
-        countriesLivedIn = [ Brazil, China, Mexico, Peru, United States ]
-      </h4>
+      <div id={styles.underLine} data-aos="fade-in" />
       <div id={styles.mapContainer} data-aos="fade-in">
-        <img src={worldMap} id={styles.mapImg} alt="World Map"/>
+        <img src={worldMap} id={styles.mapImg} alt="World Map" />
         <div id={styles.dots}>
           <div className={`${styles.dot} ${styles.dot1}`} />
           <div className={`${styles.dot} ${styles.dot2}`} />
@@ -22,21 +20,8 @@ export default function Travel() {
         </div>
       </div>
       <h4 className={styles.travelStats} data-aos="fade-in">
-        languagesSpoken = [ English, Mandarin-Chinese, Spanish, Portuguese ]
+        countriesLivedIn = [ Brazil, China, Mexico, Peru, United States ]
       </h4>
-
-      <div id={styles.video} data-aos="fade-in">
-        <iframe
-          width="55%"
-          height="500vh"
-          src="https://www.youtube.com/embed/xDnxZbRdYy8"
-          frameBorder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          data-aos="fade-in"
-          title="Expressing myself in multiple languages"
-        />
-      </div>
     </div>
-  )
+  );
 }

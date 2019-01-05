@@ -3,11 +3,11 @@ import React from 'react'
 import Layout from '../components/layout'
 import Contact from '../components/contact/Contact';
 
-const ProjectsPage = () => (
+const ContactPage = () => (
   <>
   <Layout />
   <Contact />
   </>
 )
 
-export default ProjectsPage
+export default ContactPage

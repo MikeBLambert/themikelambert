@@ -1,6 +1,33 @@
 #codeTitle {
   font-size: 40px;
   text-align: center;
+  color: black;
+  text-shadow: 1px 1px 1px purple;
+  margin: 0;
+}
+
+@media (max-width: 750px) {
+  #underLine {
+    background-color: black;
+    height: 2px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 1px purple;
+  }
+}
+
+@media (min-width: 750px) {
+  #underLine {
+    background-color: black;
+    height: 2px;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 1px purple;
+  }
 }
 
 #allLogosDiv {
@@ -18,7 +45,8 @@
   width: 150px;
   height: 175px;
   background-color: white;
-  box-shadow: 2.5px 2.5px 5px;
+  box-shadow: 1px 1px 1px purple;
+  border: 3px solid black;
 }
 
 .logoLabel {
@@ -36,74 +64,70 @@
   margin: 0px;
 }
 
-#reactLogoDiv {
-  /* padding-left: 25px;
-  padding-right: 25px; */
-}
-
 #reactLogo {
   padding-top: 15px;
-  width: 135px;
+  width: 175px;
   margin: 0;
 }
 
 #reduxLogo {
   padding-top: 15px;
-  width: 60px;
   margin: 0;
 }
 
 #nodeLogo {
-  padding-top: 20px;
-  width: 75px;
+  padding-top: 40px;
 }
 
 #jsLogo {
-  padding-top: 5px;
+  padding-top: 25px;
   margin: 0;
   width: 75px;
 }
 
 #htmlLogo {
-  padding-top: 5px;
+  padding-top: 25px;
   margin: 0;
   width: 87px;
 }
 
 #cssLogo {
-  padding-top: 5px;
+  padding-top: 25px;
   margin: 0;
   width: 87px;
 }
 
 #gatsbyLogo {
-  padding-top: 5px;
+  padding-top: 25px;
   margin: 0;
   width: 85px;
 }
 
 #postgresLogo {
-  padding-top: 5px;
+  padding-top: 25px;
   margin: 0;
   width: 85px;
 }
 
 #mongoLogo {
+  padding-top: 20px;
+  width: 100px;
   margin: 0;
 }
 
 #jestLogo {
-  padding-top: 20px;
-  width: 125px;
+  padding-top: 25px;
+  width: 150px;
 }
 
 #gitLogo {
-  padding-top: 5px;
+  padding-top: 25px;
   margin: 0;
   width: 85px;
 }
 
 #bashLogo {
-  padding-top: 5px;
+  padding-top: 20px;
+  width: 100px;
   margin: 0;
 }

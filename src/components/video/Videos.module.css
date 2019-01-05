@@ -1,0 +1,36 @@
+#videoContainer {
+  background-color: #f3eaff;
+}
+#videosTitle {
+  font-size: 75px;
+  text-align: center;
+  padding-top: 75px;
+  text-shadow: 2.5px 2.5px 5px purple;
+}
+
+iframe {
+  border: 2px solid black;
+  background: purple;
+}
+
+#videosDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.videoDiv {
+  padding: 1em;
+  margin: 1em;
+  box-shadow: 2.5px 2.5px 5px purple;
+  /* background: #0496FF; */
+  background: white;
+  border: 3px solid black;
+}
+
+#videoTitle {
+  font-size: 30px;
+  text-align: center;
+  color: black;
+  text-shadow: 1px 1px 1px purple;
+}

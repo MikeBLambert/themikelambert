@@ -2,11 +2,40 @@
   font-size: 40px;
   text-align: center;
   padding-top: 75px;
+  color: black;
+  text-shadow: 1px 1px 1px purple;
+  margin: 0;
+}
+
+@media (max-width: 750px) {
+  #underLine {
+    background-color: black;
+    height: 2px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 1px purple;
+  }
+}
+
+@media (min-width: 750px) {
+  #underLine {
+    background-color: black;
+    height: 2px;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 1px purple;
+  }
 }
 
 .travelStats {
   font-size: 23px;
   text-align: center;
+  padding-bottom: 125px;
+  margin: 0;
 }
 
 @keyframes pulse {
@@ -38,7 +67,7 @@
   height: 13px;
   border-radius: 50%;
   animation: pulse 1.5s infinite ease-out;
-  background: #346ab4;
+  background: purple;
   position: absolute;
   z-index: 1;
   top: 50%;

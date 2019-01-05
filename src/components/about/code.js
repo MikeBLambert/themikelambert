@@ -20,6 +20,8 @@ export default function Code() {
       <h1 data-aos="fade-in" id={styles.codeTitle}>
         {'{ Software Engineer }'}
       </h1>
+      <div id={styles.underLine} data-aos="fade-in" />
+
       <div id={styles.allLogosDiv}>
         <div data-aos="zoom-in-left" className={styles.logoDiv}>
           <img
@@ -138,7 +140,12 @@ export default function Code() {
           <h4 className={styles.logoLabel}>Git</h4>
         </div>
         <div data-aos="zoom-in-right" className={styles.logoDiv}>
-          <img src={bashLogo} className={styles.logo} id={styles.bashLogo} alt="bash logo" />
+          <img
+            src={bashLogo}
+            className={styles.logo}
+            id={styles.bashLogo}
+            alt="bash logo"
+          />
           <h4 className={styles.logoLabel}>BASH</h4>
         </div>
       </div>

@@ -3,11 +3,11 @@ import React from 'react'
 import Layout from '../components/layout'
 import Blog from '../components/blog/Blog';
 
-const ProjectsPage = () => (
+const BlogPage = () => (
   <>
   <Layout />
   <Blog />
   </>
 )
 
-export default ProjectsPage
+export default BlogPage

@@ -9,6 +9,7 @@ export default function Study() {
   return (
     <div>
       <h1 data-aos="fade-in" id={styles.studyTitle}>{'{ Graduate }'}</h1>
+      <div id={styles.underLine} data-aos="fade-in" />
       <div id={styles.allStudyLogos}>
         <div className={styles.studyLogoDiv} data-aos="fade-left">
           <img src={uwLogo} id={styles.uwLogo} alt="University of Washington Logo" />
