@@ -27,7 +27,7 @@ export default class Videos extends PureComponent {
       );
     });
     return (
-        <div id="Videos" id={styles.videoContainer}>
+        <div id={styles.videoContainer}>
           <h1 id={styles.videosTitle} data-aos="fade-in">
             {'< Videos />'}
           </h1>
