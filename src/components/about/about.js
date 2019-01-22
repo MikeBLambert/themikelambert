@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import Code from './Code';
 import styles from './About.module.css';
 import Study from './Study';
-import Global from './Travel';
+import Travel from './Travel';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Intrapreneur from './Intrapreneur';
+import Polyglot from './Polyglot';
 
 export default class About extends Component {
 
@@ -21,7 +23,9 @@ export default class About extends Component {
         </h1>
         <Code />
         <Study />
-        <Global />
+        <Intrapreneur />
+        <Travel />
+        <Polyglot />
       </div>
     );
   }

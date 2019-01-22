@@ -16,12 +16,11 @@ const Layout = () => (
       }
     `}
     render={data => (
-      <>
+
         <Header
           id={styles.landingWithHeader}
           siteTitle={data.site.siteMetadata.title}
         />
-      </>
     )}
   />
 );

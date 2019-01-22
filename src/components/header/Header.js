@@ -29,7 +29,7 @@ export default class Nav extends PureComponent {
   }
 
   render() {
-    const links = ['About', 'Projects', 'Blog', 'Videos', 'Contact'];
+    const links = ['About', 'Projects', 'Blog', 'Contact'];
     const listLinks = links.map((link, i) => {
       return (
         <Link key={i} to={link} className={styles.navLink}>

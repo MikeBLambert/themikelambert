@@ -12,7 +12,7 @@ export default class Projects extends PureComponent {
 
   componentDidMount() {
     AOS.init({
-      delay: 300,
+      delay: 100,
     });
   }
 
