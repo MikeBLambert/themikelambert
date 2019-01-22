@@ -9,6 +9,9 @@ export default function Travel() {
         {'{ Globe Trotter }'}
       </h1>
       <div id={styles.underLine} data-aos="fade-in" />
+      <h4 className={styles.travelStats} data-aos="fade-in">
+        countriesLivedIn = [ Brazil, China, Mexico, Peru, United States ]
+      </h4>
       <div id={styles.mapContainer} data-aos="fade-in">
         <img src={worldMap} id={styles.mapImg} alt="World Map" />
         <div id={styles.dots}>
@@ -19,9 +22,6 @@ export default function Travel() {
           <div className={`${styles.dot} ${styles.dot5}`} />
         </div>
       </div>
-      <h4 className={styles.travelStats} data-aos="fade-in">
-        countriesLivedIn = [ Brazil, China, Mexico, Peru, United States ]
-      </h4>
     </div>
   );
 }

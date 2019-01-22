@@ -8,7 +8,7 @@ export default function Polyglot() {
   return (
     <div>
       <h1 data-aos="fade-in" id={styles.intraTitle}>
-        {'{ Polyglot }'}
+        {'{ Multilingual }'}
       </h1>
       <div id={styles.underLine} data-aos="fade-in" />
       <div id={styles.videoDiv} data-aos="fade-in">
