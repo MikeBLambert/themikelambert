@@ -3,9 +3,6 @@ import styles from './Video.module.css';
 import { VIDEO_URLS } from '../video/fixtures/videoContent';
 
 export default function Intrapreneur() {
-  const videoStyles = {
-    border: '3px solid black',
-  };
   return (
     <div>
       <h1 data-aos="fade-in" id={styles.intraTitle}>
@@ -16,7 +13,6 @@ export default function Intrapreneur() {
         <iframe
           src={VIDEO_URLS.intrapreneurship}
           id={styles.video}
-          style={videoStyles}
           title="intrapreneurship"
         />
       </div>
