@@ -42,6 +42,7 @@ export default class Nav extends PureComponent {
       <div>
         <div id={styles.landing}>
           <img src={backgroundImage} alt="mountains" style={{height:`${this.state.imageHeight}`} }className={styles.landingImage} id="landingImage" />
+          
           <div id={styles.hamburgerContainer}>
             <label id={styles.hamburgerLabel}>
               Checkbox for hamburger button
