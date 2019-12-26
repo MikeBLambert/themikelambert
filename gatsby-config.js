@@ -1,7 +1,10 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
     title: 'Mike Lambert',
-    description: 'Mike Lambert\'s personal website',
+    description: "Mike Lambert's personal website",
     author: 'Mike Lambert',
   },
   plugins: [
@@ -34,6 +37,12 @@ module.exports = {
         icon: 'src/images/favicon.png', // This path is relative to the root of the site.
       },
     },
-
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
+        accessToken: process.env.GATSBY_CONTENTFUL_CONTENT_DELIVERY_API_ACCESS_TOKEN,
+      },
+    },
   ],
-}
+};

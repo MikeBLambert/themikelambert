@@ -14,7 +14,11 @@ export default class Nav extends PureComponent {
   componentDidMount() {
     const nav = document.querySelector('nav');
     const imageHeight = document.getElementById('landingImage').height;
-    this.setState({ top: nav.offsetTop, height: nav.offsetHeight, imageHeight });
+    this.setState({
+      top: nav.offsetTop,
+      height: nav.offsetHeight,
+      imageHeight,
+    });
     window.addEventListener('scroll', this.handleScroll);
   }
 
@@ -41,8 +45,14 @@ export default class Nav extends PureComponent {
     return (
       <div>
         <div id={styles.landing}>
-          <img src={backgroundImage} alt="mountains" style={{height:`${this.state.imageHeight}`} }className={styles.landingImage} id="landingImage" />
-          
+          <img
+            src={backgroundImage}
+            alt="mountains"
+            style={{ height: `${this.state.imageHeight}` }}
+            className={styles.landingImage}
+            id="landingImage"
+          />
+
           <div id={styles.hamburgerContainer}>
             <label id={styles.hamburgerLabel}>
               Checkbox for hamburger button

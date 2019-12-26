@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Post.module.css';
 
-export default function BlogGoals({ title, url, alt, image }) {
+const Post = ({ title, url, alt, image })  => {
   return (
     <div data-aos="zoom-in" id={styles.postContainer}>
       <div id={styles.postTitleAndImage}>
@@ -14,3 +14,5 @@ export default function BlogGoals({ title, url, alt, image }) {
     </div>
   );
 }
+
+export default Post;
