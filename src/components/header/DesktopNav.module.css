@@ -1,0 +1,24 @@
+@media (max-width: 699px) {
+  .desktopNav {
+    display: none;
+  }
+}
+
+@media (min-width: 700px) {
+  .navBar {
+    height: 12vh;
+    background-color: purple;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 99999;
+  }
+
+  .fixedNav {
+    position: fixed;
+    top: 0;
+    height: 12vh;
+    background-color: purple;
+    width: 100%;
+  }
+}

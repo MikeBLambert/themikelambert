@@ -1,0 +1,24 @@
+.postDetailContainerOuter {
+  background-color: purple;
+  padding: 3vw;
+}
+
+.postDetailContainerInner {
+  padding: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  background-color: white;
+  border: 5px solid black;
+}
+.postDetailTitle {
+  text-align: center;
+}
+.ripple {
+  border: 2px solid black;
+  width: 85%;
+  text-align: center;
+  margin-bottom: 5vh;
+}

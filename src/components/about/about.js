@@ -1,32 +1,31 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
 import Code from './Code';
-import styles from './About.module.css';
 import Study from './Study';
 import Travel from './Travel';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Intrapreneur from './Intrapreneur';
 import Polyglot from './Polyglot';
+import Headline1 from '../../common/text/Headline1';
+import Page from '../../common/page/Page';
 
-export default class About extends Component {
-
-  componentDidMount() {
+const About = () => {
+  useEffect(() => {
     AOS.init({
       delay: 300,
     });
-  }
-  render() {
-    return (
-      <div className={styles.aboutContainer} id="About">
-        <h1 id={styles.aboutTitle} data-aos="fade-in">
-          {'< About />'}
-        </h1>
-        <Code />
-        <Study />
-        <Intrapreneur />
-        <Travel />
-        <Polyglot />
-      </div>
-    );
-  }
-}
+  }, []);
+
+  return (
+    <Page>
+      <Headline1 data-aos="fade-in">{'< About />'}</Headline1>
+      <Code />
+      <Study />
+      <Intrapreneur />
+      <Travel />
+      <Polyglot />
+    </Page>
+  );
+};
+
+export default About;

@@ -1,58 +1,62 @@
-import React, { PureComponent } from 'react';
+import React, { useEffect } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import styles from './Blog.module.css';
 import Post from './Post';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { navigate } from 'gatsby';
+import Headline1 from '../../common/text/Headline1';
+import Page from '../../common/page/Page';
 
-export default class Blog extends PureComponent {
-  async componentDidMount() {
+const Blog = () => {
+  useEffect(() => {
     AOS.init({
       delay: 100,
     });
-  }
+  }, []);
+  const handlePostClick = ({ title }) => {
+    navigate(`blog/${title.split(' ').join('-')}`);
+  };
 
-  renderPosts = ({allContentfulBlogPost, allContentfulAsset}) => allContentfulBlogPost.nodes.map(({title, imageAlt, url}, index) => console.log(allContentfulBlogPost)||<Post
-    key={title}
-        title={title}
-        url={url}
-        alt={imageAlt}
-        image={allContentfulAsset.nodes[index].file.url}
-      />
-  )
+  const renderPostList = ({ allContentfulBlogPost }) =>
+    allContentfulBlogPost.edges.map(
+      ({ node: { id, title, imageAlt, image } }) => (
+        <Post
+          onClick={() => handlePostClick({ title })}
+          key={id}
+          title={title}
+          alt={imageAlt}
+          image={image.file.url}
+        />
+      )
+    );
 
-  render() {
-    return (
-      <div id="Blog" className={styles.blogContainer}>
-        <h1 id={styles.blogTitle} data-aos="fade-in">
-          {'< Blog />'}
-        </h1>
-        <StaticQuery
-          query={graphql`
+  return (
+    <Page>
+      <Headline1 data-aos="fade-in">{'< Blog />'}</Headline1>
+      <StaticQuery
+        query={graphql`
           {
             allContentfulBlogPost {
-              nodes {
-                title
-                imageAlt
-                createdAt
-                url
-              }
-            }
-            allContentfulAsset {
-              nodes {
-                file {
+              edges {
+                node {
+                  id
                   url
-                  fileName
-                  contentType
+                  title
+                  imageAlt
+                  image {
+                    file {
+                      url
+                    }
+                  }
                 }
               }
             }
           }
-          `
-          }
-          render={(data) => this.renderPosts(data)}
-        />
-      </div>
-    );
-  }
-}
+        `}
+        render={data => renderPostList(data)}
+      />
+    </Page>
+  );
+};
+
+export default Blog;

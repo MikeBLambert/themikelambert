@@ -1,18 +1,17 @@
 import React from 'react';
 import styles from './Post.module.css';
+import { Card } from '../../common/card/Card';
 
-const Post = ({ title, url, alt, image })  => {
+const Post = ({ title, alt, image, onClick }) => {
   return (
-    <div data-aos="zoom-in" id={styles.postContainer}>
-      <div id={styles.postTitleAndImage}>
-        <h3 id={styles.postTitle}>{title}</h3>
+    <Card scrollAnimation="zoom-in" onClick={onClick}>
+      <h3 className={styles.title}>{title}</h3>
+      <div className={styles.ripple} />
+      <div className={styles.content}>
         <img id={styles.postImage} src={image} alt={alt} />
       </div>
-      <a href={url}>
-        <button id={styles.postButton}>Read Article</button>
-      </a>
-    </div>
+    </Card>
   );
-}
+};
 
 export default Post;

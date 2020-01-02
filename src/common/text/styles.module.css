@@ -1,8 +1,4 @@
-.aboutContainer {
-  background-color: #f3eaff;
-}
-
-#aboutTitle {
+.headline1 {
   font-size: 75px;
   text-align: center;
   padding-top: 75px;
@@ -10,6 +6,9 @@
   text-shadow: 2.5px 2.5px 5px purple;
 }
 
-#landingWithHeader {
-  position: relative;
+.headline2 {
+  font-size: 40px;
+  text-align: center;
+  color: black;
+  text-shadow: 1px 1px 1px purple;
 }

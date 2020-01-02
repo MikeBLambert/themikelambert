@@ -8,13 +8,6 @@
   z-index: 999;
 }
 
-#projectsTitle {
-  font-size: 75px;
-  text-align: center;
-  padding-top: 75px;
-  text-shadow: 2.5px 2.5px 5px purple;
-}
-
 #buttonContainer {
   display: flex;
   flex-direction: column;

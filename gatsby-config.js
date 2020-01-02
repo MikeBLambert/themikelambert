@@ -1,6 +1,6 @@
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 module.exports = {
   siteMetadata: {
     title: 'Mike Lambert',
@@ -34,14 +34,15 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/favicon.png', // This path is relative to the root of the site.
+        icon: 'src/images/favicon.png',
       },
     },
     {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
-        accessToken: process.env.GATSBY_CONTENTFUL_CONTENT_DELIVERY_API_ACCESS_TOKEN,
+        accessToken:
+          process.env.GATSBY_CONTENTFUL_CONTENT_DELIVERY_API_ACCESS_TOKEN,
       },
     },
   ],

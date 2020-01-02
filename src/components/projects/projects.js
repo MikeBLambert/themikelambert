@@ -4,6 +4,7 @@ import Project from './Project';
 import { projects } from './fixtures/projectContent';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Headline1 from '../../common/text/Headline1';
 
 export default class Projects extends PureComponent {
   state = {
@@ -65,9 +66,7 @@ export default class Projects extends PureComponent {
     return (
       <div id="Projects" className={projectsDivStyle}>
         {show === 'none' && (
-          <h1 id={styles.projectsTitle} data-aos="fade-in">
-            {'< Projects />'}
-          </h1>
+          <Headline1 data-aos="fade-in">{'< Projects />'}</Headline1>
         )}
 
         <div id={styles.buttonContainer}>

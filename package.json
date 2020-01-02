@@ -1,9 +1,11 @@
 {
-  "name": "theMikeLambert.com",
+  "name": "theMikeLambert",
   "description": "Personal Site for Mike Lambert",
   "version": "1.0.0",
   "author": "Mike Lambert",
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^13.4.0",
+    "@contentful/rich-text-types": "^13.4.0",
     "aos": "^2.3.4",
     "gatsby": "^2.18.17",
     "gatsby-image": "^2.0.25",
@@ -20,7 +22,9 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.18",
+    "slug": "^2.0.0",
     "typography": "^0.16.18",
+    "typography-theme-bootstrap": "^0.16.19",
     "typography-theme-judah": "^0.16.18"
   },
   "keywords": [
