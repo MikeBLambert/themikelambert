@@ -1,7 +1,22 @@
 .navLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
+  height: 100%;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 35px;
+}
+
+@media (min-width: 699px) {
+  .navLink {
+    width: 25%;
+  }
+  .navLink:hover {
+    background: white;
+    color: purple;
+    font-size: 37px;
+  }
 }
 
 @media (max-width: 699px) {

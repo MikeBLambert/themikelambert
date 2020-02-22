@@ -5,6 +5,8 @@ import { projects } from './fixtures/projectContent';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Headline1 from '../../common/text/Headline1';
+import Ripple from '../../common/ripple/Ripple';
+import { AosEffects } from '../../utils/constants';
 
 export default class Projects extends PureComponent {
   state = {
@@ -66,7 +68,12 @@ export default class Projects extends PureComponent {
     return (
       <div id="Projects" className={projectsDivStyle}>
         {show === 'none' && (
-          <Headline1 data-aos="fade-in">{'< Projects />'}</Headline1>
+          <Fragment>
+            <Headline1 data-aos={AosEffects.FADE_IN}>
+              {'< Projects />'}
+            </Headline1>
+            <Ripple data-aos={AosEffects.FADE_IN} />
+          </Fragment>
         )}
 
         <div id={styles.buttonContainer}>

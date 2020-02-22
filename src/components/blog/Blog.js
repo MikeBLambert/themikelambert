@@ -1,18 +1,10 @@
 import React, { useEffect } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Post from './Post';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import { navigate } from 'gatsby';
-import Headline1 from '../../common/text/Headline1';
 import Page from '../../common/page/Page';
 
 const Blog = () => {
-  useEffect(() => {
-    AOS.init({
-      delay: 100,
-    });
-  }, []);
   const handlePostClick = ({ title }) => {
     navigate(`blog/${title.split(' ').join('-')}`);
   };
@@ -31,8 +23,7 @@ const Blog = () => {
     );
 
   return (
-    <Page>
-      <Headline1 data-aos="fade-in">{'< Blog />'}</Headline1>
+    <Page title="< Blog />">
       <StaticQuery
         query={graphql`
           {

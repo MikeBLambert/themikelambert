@@ -1,4 +1,4 @@
-export const NAV_LINKS = ['About', 'Projects', 'Blog', 'Contact'];
+export const NAV_LINKS = ['About', 'Videos', 'Blog', 'Contact'];
 
 export const CodeStylesMap = {
   VUE: {
@@ -13,9 +13,11 @@ export const CodeStylesMap = {
   REDUX: {
     paddingTop: '15px',
     margin: '0',
+    width: '95px',
   },
   NODEJS: {
     paddingTop: '40px',
+    width: '95px',
   },
   JAVASCRIPT: {
     paddingTop: '25px',
@@ -63,7 +65,41 @@ export const CodeStylesMap = {
   },
 };
 
+export const StudyStylesMap = {
+  UW: {
+    paddingTop: '35px',
+    width: '150px',
+    textAlign: 'center',
+    margin: '0',
+  },
+  NANJING_NORMAL: {
+    paddingTop: '20px',
+    width: '120px',
+    alignSelf: 'center',
+    margin: '0',
+  },
+  IE: {
+    paddingTop: '10px',
+    width: '125px',
+    alignSelf: 'center',
+    margin: '0',
+  },
+  ALCHEMY: {
+    paddingTop: '10px',
+    width: '150px',
+    margin: '5px 0 0 0',
+  },
+};
+
+export const StudyTitlesMap = {
+  UW: 'Philosophy',
+  NANJING_NORMAL: 'Mandarin-Chinese',
+  IE: 'MBA',
+  ALCHEMY: 'Software Engineering',
+};
+
 export const AosEffects = {
   ZOOM_IN_LEFT: 'zoom-in-left',
   ZOOM_IN_RIGHT: 'zoom-in-right',
+  FADE_IN: 'fade-in',
 };

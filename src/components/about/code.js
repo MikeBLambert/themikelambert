@@ -1,9 +1,8 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import styles from './Code.module.css';
 import { CodeStylesMap, AosEffects } from '../../utils/constants';
-import Ripple from '../../common/ripple/Ripple';
-import Headline2 from '../../common/text/Headline2';
+import PageContent from '../../common/page/PageContent';
+import ImageCardGroup from '../../common/card/ImageCardGroup';
 
 const Code = () => {
   const getAosEffect = ({ index }) => {
@@ -11,48 +10,34 @@ const Code = () => {
     return AosEffects.ZOOM_IN_RIGHT;
   };
 
-  const renderLogos = data => {
-    if (!data) return null;
-    return data.allContentfulAsset.nodes.map(({ title, file }, index) => {
-      return (
-        <div
-          key={title}
-          data-aos={getAosEffect({ index })}
-          className={styles.logoDiv}
-        >
-          <img
-            src={file.url}
-            className={styles.logo}
-            style={CodeStylesMap[title.toUpperCase()]}
-          />
-          <h4>{title}</h4>
-        </div>
-      );
-    });
-  };
+  const getImageStyle = ({ title }) => CodeStylesMap[title.toUpperCase()];
+
+  const renderImageCardGroup = ({ data }) => {};
 
   return (
-    <div id={styles.codeContent}>
-      <Headline2 data-aos="fade-in">{'{ Software Engineer }'}</Headline2>
-      <Ripple data-aos="fade-in" />
-      <div id={styles.allLogosDiv}>
-        <StaticQuery
-          query={graphql`
-            {
-              allContentfulAsset(filter: { description: { eq: "codeLogo" } }) {
-                nodes {
-                  title
-                  file {
-                    url
-                  }
+    <PageContent header="{ Software Engineer }">
+      <StaticQuery
+        query={graphql`
+          {
+            allContentfulAsset(filter: { description: { eq: "codeLogo" } }) {
+              nodes {
+                title
+                file {
+                  url
                 }
               }
             }
-          `}
-          render={data => renderLogos(data)}
-        />
-      </div>
-    </div>
+          }
+        `}
+        render={data => (
+          <ImageCardGroup
+            data={data.allContentfulAsset.nodes}
+            getAosEffect={getAosEffect}
+            getImageStyle={getImageStyle}
+          />
+        )}
+      />
+    </PageContent>
   );
 };
 

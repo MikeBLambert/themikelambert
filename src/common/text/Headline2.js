@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './styles.module.css';
+import styles from './Headline2.module.css';
 
 const Headline2 = ({ children, ...other }) => (
   <h2 className={styles.headline2} {...other}>

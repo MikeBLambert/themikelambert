@@ -1,47 +1,49 @@
 import React from 'react';
-import styles from './Study.module.css';
-import uwLogo from '../../images/logos/university-of-washington.png';
-import nanjingNormalLogo from '../../images/logos/nanjing-normal.png';
-import ieLogo from '../../images/logos/ie.png';
-import alchemyLogo from '../../images/logos/alchemy.png';
-import Ripple from '../../common/ripple/Ripple';
-import Headline2 from '../../common/text/Headline2';
+import PageContent from '../../common/page/PageContent';
+import { StaticQuery, graphql } from 'gatsby';
+import ImageCardGroup from '../../common/card/ImageCardGroup';
+import {
+  StudyStylesMap,
+  AosEffects,
+  StudyTitlesMap,
+} from '../../utils/constants';
 
 export default function Study() {
+  const getAosEffect = ({ index }) => {
+    if (index % 2 === 0) return AosEffects.ZOOM_IN_LEFT;
+    return AosEffects.ZOOM_IN_RIGHT;
+  };
+
+  const getImageStyle = ({ title }) => StudyStylesMap[title.toUpperCase()];
+
+  const getTitle = ({ title }) => StudyTitlesMap[title.toUpperCase()];
+
   return (
-    <div>
-      <Headline2 data-aos="fade-in">{'{ Graduate }'}</Headline2>
-      <Ripple data-aos="fade-in" />
-      <div id={styles.allStudyLogos}>
-        <div className={styles.studyLogoDiv} data-aos="fade-left">
-          <img
-            src={uwLogo}
-            id={styles.uwLogo}
-            alt="University of Washington Logo"
+    <PageContent header="{ Graduate }">
+      <StaticQuery
+        query={graphql`
+          {
+            allContentfulAsset(filter: { description: { eq: "studyLogo" } }) {
+              nodes {
+                title
+                file {
+                  url
+                }
+              }
+            }
+          }
+        `}
+        render={data => (
+          <ImageCardGroup
+            data={data.allContentfulAsset.nodes}
+            cardHeight="250px"
+            cardWidth="200px"
+            getAosEffect={getAosEffect}
+            getImageStyle={getImageStyle}
+            getTitle={getTitle}
           />
-          <h4 className={styles.studyLabel}>Philosophy</h4>
-        </div>
-        <div className={styles.studyLogoDiv} data-aos="fade-left">
-          <img
-            src={nanjingNormalLogo}
-            id={styles.nanjingNormalLogo}
-            alt="Nanjing Normal University Logo"
-          />
-          <h4 className={styles.studyLabel}>Mandarin-Chinese</h4>
-        </div>
-        <div className={styles.studyLogoDiv} data-aos="fade-right">
-          <img src={ieLogo} id={styles.ieLogo} alt="IE Business School Logo" />
-          <h4 className={styles.studyLabel}>MBA</h4>
-        </div>
-        <div className={styles.studyLogoDiv} data-aos="fade-right">
-          <img
-            id={styles.alchemyLogo}
-            src={alchemyLogo}
-            alt="Alchemy Code Lab Logo"
-          />
-          <h4 className={styles.studyLabel}>Software Engineering</h4>
-        </div>
-      </div>
-    </div>
+        )}
+      />
+    </PageContent>
   );
 }

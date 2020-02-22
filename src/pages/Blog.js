@@ -3,7 +3,7 @@ import Layout from '../components/layout';
 import Blog from '../components/blog/Blog';
 
 const BlogPage = () => (
-  <Layout showLandingImage={false}>
+  <Layout>
     <Blog />
   </Layout>
 );

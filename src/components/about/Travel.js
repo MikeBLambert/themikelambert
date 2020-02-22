@@ -1,27 +1,27 @@
 import React from 'react';
 import styles from './travel.module.css';
 import worldMap from '../../images/world-map.png';
-import Ripple from '../../common/ripple/Ripple';
-import Headline2 from '../../common/text/Headline2';
+import PageContent from '../../common/page/PageContent';
+import { AosEffects } from '../../utils/constants';
 
-export default function Travel() {
+const Travel = () => {
+  const { dot1, dot2, dot3, dot4, dot5 } = styles;
+
+  const renderTravelDots = () =>
+    [dot1, dot2, dot3, dot4, dot5].map(dot => (
+      <div className={`${styles.dot} ${dot}`} />
+    ));
   return (
-    <div>
-      <Headline2 data-aos="fade-in">{'{ Globe Trotter }'}</Headline2>
-      <Ripple data-aos="fade-in" />
-      <h4 className={styles.travelStats} data-aos="fade-in">
+    <PageContent header="{ Globe Trotter }">
+      <h4 className={styles.travelStats} data-aos={AosEffects.FADE_IN}>
         countriesLivedIn = [ Brazil, China, Mexico, Peru, United States ]
       </h4>
-      <div id={styles.mapContainer} data-aos="fade-in">
-        <img src={worldMap} id={styles.mapImg} alt="World Map" />
-        <div id={styles.dots}>
-          <div className={`${styles.dot} ${styles.dot1}`} />
-          <div className={`${styles.dot} ${styles.dot2}`} />
-          <div className={`${styles.dot} ${styles.dot3}`} />
-          <div className={`${styles.dot} ${styles.dot4}`} />
-          <div className={`${styles.dot} ${styles.dot5}`} />
-        </div>
+      <div className={styles.mapContainer} data-aos={AosEffects.FADE_IN}>
+        <img src={worldMap} className={styles.mapImg} alt="World Map" />
+        <div className={styles.dots}>{renderTravelDots()}</div>
       </div>
-    </div>
+    </PageContent>
   );
-}
+};
+
+export default Travel;

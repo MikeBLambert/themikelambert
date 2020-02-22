@@ -1,59 +1,40 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Header from './header/Header';
 import styles from './layout.module.css';
+import useDynamicHeader from '../common/custom-hooks/useDynamicHeader';
 
-const Layout = ({ children, showLandingImage }) => {
-  const [scrolledTo, setScrolledTo] = useState(null);
-  const [top, setTop] = useState(null);
-  const [height, setHeight] = useState(null);
-  const [imageHeight, setImageHeight] = useState(null);
-
-  const handleScroll = () => {
-    setScrolledTo(window.scrollY);
-  };
+const Layout = ({ children, isLandingImageDisplayed }) => {
+  const [contentPaddingTop, imageHeight, isFixed] = useDynamicHeader();
 
   useEffect(() => {
-    if (!showLandingImage) return;
-    const nav = document.querySelector('nav');
-    const imageHeight = document.getElementById('landingImage').height;
-    setTop(nav.offsetTop);
-    setHeight(nav.offsetHeight);
-    setImageHeight(imageHeight);
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    AOS.init({
+      delay: 200,
+    });
   }, []);
-
-  useEffect(() => {
-    setScrolledTo(window.scrollY);
-  }, [window.scrollY]);
-
-  const getIsFixed = () => scrolledTo > top;
-
-  const getSectionPaddingTop = () => {
-    if (scrolledTo > top && window.innerWidth > 699) return height;
-    return 0;
-  };
 
   return (
     <>
       <Header
-        isFixed={getIsFixed()}
         imageHeight={imageHeight}
-        id={styles.landingWithHeader}
-        showLandingImage={showLandingImage}
+        isFixed={isFixed}
+        className={styles.landingWithHeader}
+        isLandingImageDisplayed={isLandingImageDisplayed}
       />
-      <div style={{ paddingTop: `${getSectionPaddingTop()}px` }}>
-        {children}
-      </div>
+      <div style={{ paddingTop: `${contentPaddingTop}px` }}>{children}</div>
     </>
   );
 };
 
 Layout.propTypes = {
   children: PropTypes.node,
+  isLandingImageDisplayed: PropTypes.bool,
+};
+
+Layout.defaultProps = {
+  isLandingImageDisplayed: false,
 };
 
 export default Layout;

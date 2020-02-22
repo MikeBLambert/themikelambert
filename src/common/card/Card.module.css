@@ -10,8 +10,7 @@
   padding: 15px;
 }
 
-.cardContainer:hover {
-  /* background-color: red; */
+.interactive:hover {
   cursor: pointer;
 }
 

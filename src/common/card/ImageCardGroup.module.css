@@ -1,28 +1,17 @@
-#allLogosDiv {
+.imageCardContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  z-index: 9999;
 }
 
-.logoDiv {
+.imageCard {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin: 9px;
-  width: 150px;
-  height: 175px;
   background-color: white;
   box-shadow: 1px 1px 1px purple;
   border: 3px solid black;
-}
-
-.logoLabel {
-  position: relative;
-  font-size: 20px;
-  margin: 0 0 15px 0;
-}
-
-.logo {
-  width: 95px;
 }

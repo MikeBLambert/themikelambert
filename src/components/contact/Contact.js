@@ -4,21 +4,12 @@ import gmailLogo from '../../images/logos/gmail.png';
 import linkedInLogo from '../../images/logos/linkedIn.png';
 import gitHubLogo from '../../images/logos/gitHub.png';
 import twitterLogo from '../../images/logos/twitter.png';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import Headline1 from '../../common/text/Headline1';
 import Page from '../../common/page/Page';
 
 export default class Contact extends PureComponent {
-  componentDidMount() {
-    AOS.init({
-      delay: 300,
-    });
-  }
   render() {
     return (
-      <Page>
-        <Headline1 data-aos="fade-in">{'< Contact />'}</Headline1>
+      <Page title="< Contact />">
         <div id={styles.contactLogosDiv}>
           <div className={styles.logoDiv} data-aos="fade-right">
             <a href="mailto:mlamb128@gmail.com">

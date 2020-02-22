@@ -1,3 +1,13 @@
 .page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #f3eaff;
+  /* margin: 15px; */
+  /* white; */
+  /* background: rgba(0, 0, 0, 0.5); */
+
+  /* opacity: 0.5; */
+  z-index: -1;
 }

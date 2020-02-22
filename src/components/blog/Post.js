@@ -1,15 +1,13 @@
 import React from 'react';
-import styles from './Post.module.css';
 import { Card } from '../../common/card/Card';
+import Headline2 from '../../common/text/Headline2';
+import styles from './Post.module.css';
 
 const Post = ({ title, alt, image, onClick }) => {
   return (
-    <Card scrollAnimation="zoom-in" onClick={onClick}>
-      <h3 className={styles.title}>{title}</h3>
-      <div className={styles.ripple} />
-      <div className={styles.content}>
-        <img id={styles.postImage} src={image} alt={alt} />
-      </div>
+    <Card scrollAnimation="zoom-in" onClick={onClick} isInteractive>
+      <Headline2>{title}</Headline2>
+      <img className={styles.postImage} src={image} alt={alt} />
     </Card>
   );
 };

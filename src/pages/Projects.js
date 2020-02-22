@@ -3,7 +3,7 @@ import Layout from '../components/layout';
 import Projects from '../components/projects/Projects';
 
 const ProjectsPage = () => (
-  <Layout showLandingImage={false}>
+  <Layout>
     <Projects />
   </Layout>
 );
