@@ -1,6 +1,5 @@
 import React from 'react';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Bold = ({ children }) => <span className="bold">{children}</span>;

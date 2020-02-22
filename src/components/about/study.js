@@ -8,7 +8,7 @@ import {
   StudyTitlesMap,
 } from '../../utils/constants';
 
-export default function Study() {
+const Study = () => {
   const getAosEffect = ({ index }) => {
     if (index % 2 === 0) return AosEffects.ZOOM_IN_LEFT;
     return AosEffects.ZOOM_IN_RIGHT;
@@ -46,4 +46,6 @@ export default function Study() {
       />
     </PageContent>
   );
-}
+};
+
+export default Study;

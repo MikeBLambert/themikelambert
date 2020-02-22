@@ -12,8 +12,6 @@ const Code = () => {
 
   const getImageStyle = ({ title }) => CodeStylesMap[title.toUpperCase()];
 
-  const renderImageCardGroup = ({ data }) => {};
-
   return (
     <PageContent header="{ Software Engineer }">
       <StaticQuery

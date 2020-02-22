@@ -16,6 +16,7 @@ const ImageCardGroup = ({
     <div className={styles.imageCardContainer}>
       {data.map(({ title, file }, index) => (
         <div
+          key={title}
           style={{ height: cardHeight, width: cardWidth }}
           className={styles.imageCard}
           data-aos={getAosEffect({ index })}

@@ -1,9 +1,0 @@
-#videoDiv {
-  display: flex;
-  justify-content: center;
-}
-
-#video {
-  width: 600px;
-  height: 300px;
-}

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { node, string } from 'prop-types';
 import styles from './Page.module.css';
 import Headline1 from '../text/Headline1';
 import Ripple from '../ripple/Ripple';
@@ -26,7 +26,8 @@ const Page = ({ children, title, ...other }) => {
 };
 
 Page.propTypes = {
-  title: PropTypes.string,
+  title: string,
+  children: node.isRequired,
 };
 
 Page.defaultProps = {

@@ -9,7 +9,7 @@ const Travel = () => {
 
   const renderTravelDots = () =>
     [dot1, dot2, dot3, dot4, dot5].map(dot => (
-      <div className={`${styles.dot} ${dot}`} />
+      <div key={dot} className={`${styles.dot} ${dot}`} />
     ));
   return (
     <PageContent header="{ Globe Trotter }">

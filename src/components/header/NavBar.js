@@ -1,4 +1,5 @@
 import React from 'react';
+import { bool } from 'prop-types';
 import { Link } from 'gatsby';
 import styles from './NavBar.module.css';
 import MobileNav from './MobileNav';
@@ -18,6 +19,10 @@ const NavBar = ({ isFixed }) => {
       <DesktopNav links={links} isFixed={isFixed} />
     </>
   );
+};
+
+NavBar.propTypes = {
+  isFixed: bool.isRequired,
 };
 
 export default NavBar;

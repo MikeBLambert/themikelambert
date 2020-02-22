@@ -1,4 +1,5 @@
 import React from 'react';
+import { arrayOf, object } from 'prop-types';
 import styles from './MobileNav.module.css';
 
 const MobileNav = ({ links }) => (
@@ -11,5 +12,9 @@ const MobileNav = ({ links }) => (
     <div className={styles.mobileNav}>{links}</div>
   </div>
 );
+
+MobileNav.propTypes = {
+  links: arrayOf(object).isRequired,
+};
 
 export default MobileNav;
