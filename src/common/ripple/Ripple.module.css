@@ -1,0 +1,9 @@
+.ripple {
+  background-color: black;
+  height: 3.5px;
+  width: 20%;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 50px;
+  box-shadow: 2.5px 2.5px 3px purple;
+}

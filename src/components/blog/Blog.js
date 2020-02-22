@@ -1,35 +1,53 @@
-import React, { PureComponent } from 'react';
-import styles from './Blog.module.css';
+import React, { useEffect } from 'react';
+import { StaticQuery, graphql } from 'gatsby';
 import Post from './Post';
-import { posts } from './fixtures/blogContent';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { navigate } from 'gatsby';
+import Page from '../../common/page/Page';
 
-export default class Blog extends PureComponent {
-  componentDidMount() {
-    AOS.init({
-      delay: 100,
-    });
-  }
-  render() {
-    const postList = posts.map(post => {
-      return (
+const Blog = () => {
+  const handlePostClick = ({ title }) => {
+    navigate(`blog/${title.split(' ').join('-')}`);
+  };
+
+  const renderPostList = ({ allContentfulBlogPost }) =>
+    allContentfulBlogPost.edges.map(
+      ({ node: { id, title, imageAlt, image } }) => (
         <Post
-          title={post.title}
-          url={post.url}
-          alt={post.alt}
-          image={post.image}
+          onClick={() => handlePostClick({ title })}
+          key={id}
+          title={title}
+          alt={imageAlt}
+          image={image.file.url}
         />
-      );
-    });
-
-    return (
-      <div id="Blog" className={styles.blogContainer}>
-        <h1 id={styles.blogTitle} data-aos="fade-in">
-          {'< Blog />'}
-        </h1>
-        {postList}
-      </div>
+      )
     );
-  }
-}
+
+  return (
+    <Page title="< Blog />">
+      <StaticQuery
+        query={graphql`
+          {
+            allContentfulBlogPost {
+              edges {
+                node {
+                  id
+                  url
+                  title
+                  imageAlt
+                  image {
+                    file {
+                      url
+                    }
+                  }
+                }
+              }
+            }
+          }
+        `}
+        render={data => renderPostList(data)}
+      />
+    </Page>
+  );
+};
+
+export default Blog;

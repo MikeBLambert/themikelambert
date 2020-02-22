@@ -1,7 +1,11 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+const path = require(`path`);
 module.exports = {
   siteMetadata: {
     title: 'Mike Lambert',
-    description: 'Mike Lambert\'s personal website',
+    description: "Mike Lambert's personal website",
     author: 'Mike Lambert',
   },
   plugins: [
@@ -17,7 +21,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: path.join(__dirname, `src`, `images`),
       },
     },
     'gatsby-transformer-sharp',
@@ -31,9 +35,16 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/favicon.png', // This path is relative to the root of the site.
+        icon: 'src/images/favicon.png',
       },
     },
-
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
+        accessToken:
+          process.env.GATSBY_CONTENTFUL_CONTENT_DELIVERY_API_ACCESS_TOKEN,
+      },
+    },
   ],
-}
+};

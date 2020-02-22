@@ -1,14 +1,3 @@
-.contactContainer {
-  background: #f3eaff;
-}
-
-#contactTitle {
-  font-size: 75px;
-  text-align: center;
-  padding-top: 75px;
-  text-shadow: 2.5px 2.5px 5px purple;
-}
-
 #contactLogosDiv {
   padding-top: 20vh;
   padding-bottom: 24vh;

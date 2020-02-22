@@ -1,70 +1,70 @@
-import { Link } from 'gatsby';
-import React, { PureComponent } from 'react';
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import { bool, number } from 'prop-types';
 import styles from './Header.module.css';
-import backgroundImage from '../../images/landing-image.jpg';
+import Img from 'gatsby-image';
+import NavBar from './NavBar';
 
-export default class Nav extends PureComponent {
-  state = {};
-  handleScroll = this.handleScroll.bind(this);
-
-  handleScroll() {
-    this.setState({ scrolledTo: window.scrollY });
-  }
-
-  componentDidMount() {
-    const nav = document.querySelector('nav');
-    const imageHeight = document.getElementById('landingImage').height;
-    this.setState({ top: nav.offsetTop, height: nav.offsetHeight, imageHeight });
-    window.addEventListener('scroll', this.handleScroll);
-  }
-
-  componentDidUpdate() {
-    this.state.scrolledTo > this.state.top && window.innerWidth > 699
-      ? (document.body.style.paddingTop = `${this.state.height}px`)
-      : (document.body.style.paddingTop = 0);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  }
-
-  render() {
-    const links = ['About', 'Projects', 'Blog', 'Contact'];
-    const listLinks = links.map((link, i) => {
-      return (
-        <Link key={i} to={link} className={styles.navLink}>
-          {link}
-        </Link>
-      );
-    });
+const Header = ({ isLandingImageDisplayed, isFixed, imageHeight }) => {
+  const renderLandingImage = () => {
+    if (!isLandingImageDisplayed) return null;
 
     return (
-      <div>
-        <div id={styles.landing}>
-          <img src={backgroundImage} alt="mountains" style={{height:`${this.state.imageHeight}`} }className={styles.landingImage} id="landingImage" />
-          
-          <div id={styles.hamburgerContainer}>
-            <label id={styles.hamburgerLabel}>
-              Checkbox for hamburger button
-            </label>
-            <input type="checkbox" id={styles.hamburgerInput} />
-            <span className={styles.hamburgerSpan} />
-            <div id={styles.mobileNav}>{listLinks}</div>
-          </div>
-          <h1 id={styles.landingTitle}>mikeLambert</h1>
-        </div>
-
-        <div id={styles.desktopNav}>
-          <nav
-            id={styles.navBar}
-            className={
-              this.state.scrolledTo > this.state.top ? styles.fixedNav : ''
+      <StaticQuery
+        query={graphql`
+          {
+            file(relativePath: { eq: "landing-image.jpg" }) {
+              childImageSharp {
+                fluid(maxWidth: 10000, maxHeight: 10000) {
+                  base64
+                  tracedSVG
+                  aspectRatio
+                  src
+                  srcSet
+                  srcWebp
+                  srcSetWebp
+                  sizes
+                  originalImg
+                  originalName
+                  presentationWidth
+                  presentationHeight
+                }
+              }
             }
-          >
-            {listLinks}
-          </nav>
-        </div>
-      </div>
+          }
+        `}
+        render={data => (
+          <div className={styles.landing}>
+            <div className={styles.landingImage} id="landingImage">
+              <Img
+                fluid={data.file.childImageSharp.fluid}
+                style={{ height: imageHeight }}
+              />
+            </div>
+            <h1 className={styles.landingTitle}>mikeLambert</h1>
+          </div>
+        )}
+      />
     );
-  }
-}
+  };
+  return (
+    <>
+      {renderLandingImage()}
+      <NavBar isFixed={isFixed} />
+    </>
+  );
+};
+
+Header.propTypes = {
+  imageHeight: number,
+  isFixed: bool,
+  isLandingImageDisplayed: bool,
+};
+
+Header.defaultProps = {
+  imageHeight: null,
+  isFixed: true,
+  isLandingImageDisplayed: false,
+};
+
+export default Header;
