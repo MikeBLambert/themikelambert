@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import styles from './Contact.module.css';
 import gmailLogo from '../../images/logos/gmail.png';
 import linkedInLogo from '../../images/logos/linkedIn.png';

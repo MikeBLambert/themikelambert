@@ -1,10 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const useMediaQueries = () => {
-  const [windowDimensions, setWindowDimensions] = useState({
-    windowWidth: window.innerWidth,
-    windowHeight: window.innerHeight,
-  });
+  const [windowDimensions, setWindowDimensions] = useState({});
 
   const handleResize = () => {
     setWindowDimensions({
@@ -13,6 +10,7 @@ const useMediaQueries = () => {
     });
   };
   useEffect(() => {
+    handleResize();
     window.onresize = handleResize;
   }, []);
   return [windowDimensions.windowWidth, windowDimensions.windowHeight];
