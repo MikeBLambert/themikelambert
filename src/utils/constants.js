@@ -1,4 +1,9 @@
-export const NAV_LINKS = ['About', 'Videos', 'Blog', 'Contact'];
+export const NAV_LINKS = [
+  'About',
+  'Videos',
+  // 'Blog',
+  'Contact',
+];
 
 export const CodeStylesMap = {
   VUE: {
